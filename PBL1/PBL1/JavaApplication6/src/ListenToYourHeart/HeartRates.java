@@ -11,16 +11,17 @@ import java.util.Date;
  *
  * @author wesle
  */
+
 public class HeartRates {
     private String nome;
     private String sobrenome;
     private int mes;
     private int ano;
     private int dia;
-   
+    
+
 
    public HeartRates(String nome, String sobrenome, int mes, int ano, int dia) {
-        
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.mes = mes;
@@ -69,24 +70,30 @@ public class HeartRates {
     public void setDia(int dia) {
         this.dia = dia;
     }
-    public int calculaIdade(Date comparar){
+    public int calculaIdade(){
+        Date comparar = new Date() ; //Instância do objeto da classe Date.
+        int anovirada = 2018;//Variável recebendo esse ano
+        if (comparar.getDay()==1 && comparar.getMonth()==1){ // caso seja virada do ano. Ele aumenta o ano
+            anovirada++;
+        }
         if(comparar.getDay()<this.dia && comparar.getMonth()<this.mes){// Condição para caso a idade seja menor que a data atual e assim a idade dele vai ser diminuída
-            return (2018-this.ano)-1; 
+            return (anovirada-this.ano)-1; 
+            
         }
            
            
         else{
-            return 2018 - this.ano;
+            return  anovirada-this.ano;
         }
          
         
     } 
-    public int FrequenciaMaxima(Date comparar){
-        return 220 - calculaIdade(comparar);
+    public int FrequenciaMaxima(){
+        return 220 - calculaIdade();
     }
-    public int FrequenciaAlvo(Date comparar){
+    public int FrequenciaAlvo(){
         
-       int x = (85*FrequenciaMaxima(comparar))/100 - (50*FrequenciaMaxima(comparar))/100 ; //é a média entre os 50%~85% da frequênciaMaxima
-        return x;
+      return (85*FrequenciaMaxima())/100 - (50*FrequenciaMaxima())/100 ; //é a média entre os 50%~85% da frequênciaMaxima
+        
      }
 }
