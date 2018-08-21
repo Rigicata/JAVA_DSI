@@ -10,11 +10,49 @@ package cadeira;
  * @author aluno
  */
 public class PojetoCadeira {
-    String cor;
-    String material;
-    boolean braco;
-    float altura;
-    double valor;
+   private String cor;
+    private String material;
+    private boolean braco;
+    private float altura;
+    private double valor;
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    public boolean isBraco() {
+        return braco;
+    }
+
+    public void setBraco(boolean braco) {
+        this.braco = braco;
+    }
+
+    public float getAltura() {
+        return altura;
+    }
+
+    public void setAltura(float altura) {
+        this.altura = altura;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    
     
     public void Personalizar (String cor, String material,boolean braco,float altura){
         this.cor = cor;
@@ -22,7 +60,7 @@ public class PojetoCadeira {
         this.altura = altura;
         this.material = material;
     }
-   public void atribuirValor (float altura){
+   public void atribuirValor (){
        double valoracrescido;
       if(this.altura>0 && this.altura<=1){
           this.valor=50.00;
