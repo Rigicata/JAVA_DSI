@@ -5,6 +5,7 @@
  */
 package cadeira;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -37,9 +38,15 @@ public class MainCadeira {
         System.out.println("A cadeira: "+cadeira.braco+"Para o braço");
         System.out.println("A altura da cadeira: "+cadeira.altura);
     }*/
+        
+        
+//ARRAY COM INSTANCIA DENTRO DO FOR;
 
-        PojetoCadeira[] cadeiras = new PojetoCadeira[5];
-        for (int i = 0; i < 5; i++) {
+
+
+
+       /* PojetoCadeira[] cadeiras = new PojetoCadeira[5];
+        for (int i = 0; i < 2; i++) {
             PojetoCadeira cadeira = new PojetoCadeira();
             float altura = Float.parseFloat(JOptionPane.showInputDialog("Digite a altura"));
             cadeira.setAltura(altura);
@@ -55,10 +62,36 @@ public class MainCadeira {
             cadeiras[i] = cadeira;
 
         }
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 2; i++) {
             System.out.println("Altura: "+cadeiras[i].getAltura()+"\nMaterial: "+cadeiras[i].getMaterial()+"\nValor"+cadeiras[i].getValor()+"\\n");
-        }
+        }*/
 
+       
+       
+       //                                                                Agregação  
+       
+       
+       PojetoCadeira cadeira = new PojetoCadeira();
+       cadeira.setAltura(1.5f);
+       cadeira.setBraco(true);
+       cadeira.setCor("Branco");
+       
+       ArrayList<Material> materiais = new ArrayList<>();
+       int qtdMat = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de materiais: "));
+       for (int i =0;i<qtdMat;i++){
+           Material material = new Material();
+           material.setCor("Preto");
+           material.setPeso(15.10);
+           material.setPreco(8.00);
+           materiais.add(material);
+       }
+       cadeira.setMateriais(materiais);
+       
+       for (int i =0;i<qtdMat;i++){
+           System.out.println("              CADEIRA NÚMERO           "+(i+1));
+       System.out.println("Cor:"+cadeira.getMateriais().get(i).getCor()+"\nPeso:"+cadeira.getMateriais().get(i).getPeso()+"\nPreco:"+cadeira.getMateriais().get(i).getPreco()+"\n\n"); ; 
+       
+       }
     }
 
 }

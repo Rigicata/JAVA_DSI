@@ -5,13 +5,15 @@
  */
 package cadeira;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author aluno
  */
 public class PojetoCadeira {
    private String cor;
-    private String material;
+    private ArrayList<Material> materiais;
     private boolean braco;
     private float altura;
     private double valor;
@@ -23,13 +25,12 @@ public class PojetoCadeira {
     public void setCor(String cor) {
         this.cor = cor;
     }
-
-    public String getMaterial() {
-        return material;
+    public ArrayList<Material> getMateriais() {
+        return this.materiais;
     }
 
-    public void setMaterial(String material) {
-        this.material = material;
+    public void setMateriais(ArrayList<Material> materiais) {
+        this.materiais = materiais;
     }
 
     public boolean isBraco() {
@@ -54,11 +55,11 @@ public class PojetoCadeira {
 
     
     
-    public void Personalizar (String cor, String material,boolean braco,float altura){
+    public void Personalizar (String cor, ArrayList<Material> materiais,boolean braco,float altura){
         this.cor = cor;
         this.braco = braco;
         this.altura = altura;
-        this.material = material;
+        
     }
    public void atribuirValor (){
        double valoracrescido;
