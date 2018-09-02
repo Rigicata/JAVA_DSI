@@ -16,8 +16,8 @@ public class Edificio {
     private ArrayList<String> nomedosandares;
     private ArrayList<Porta> portas;
 
-    public Edificio(String coredificio) {
-        this.coredificio = coredificio;
+    public Edificio() {
+        
         this.nomedosandares = new ArrayList<>();
         this.portas = new ArrayList<>();
     }
@@ -57,15 +57,36 @@ public class Edificio {
      }
     
     
-    /*public int totalDeAndares(){
+    public int totalDeAndares(){
+        int andares = 0;
+        
+        for (int i =0;i<this.nomedosandares.size();i++){
+          andares++;
+      }
+      return andares;
+          
         
     }
-    public int totaldePortas(){
-        
+    
+    
+    
+     public int quantasPortasEstaoAbertas(){
+      int portasabertas =0;
+      for (int i =0;i<this.portas.size();i++){
+          portasabertas++;
+      }
+      return portasabertas;
+      
+      
+      
+      
     }
-    public int qtdPortasAbertas(){
+    public int totalDePortas(){
         
-    }*/
+        return this.portas.size();
+      
+    
+    }
     
     
     

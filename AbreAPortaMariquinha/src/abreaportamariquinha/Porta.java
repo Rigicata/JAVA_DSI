@@ -21,13 +21,7 @@ public class Porta {
     public String getCorPorta() {
         return corporta;
     }
-    public boolean getAberta() {
-        return aberta;
-    }
-
-    
-    
-
+ 
     public double getDimensaoX() {
         return dimensaoX;
     }

@@ -12,10 +12,31 @@ import java.util.ArrayList;
  * @author aluno
  */
 public class Casa {
-    ArrayList<Porta> portas;
-    private String corcasa;
+    private ArrayList<Porta> portas;
+    private ArrayList<String> corcasa;
+    
+    
+    
+    public Casa() {
+        this.portas = new ArrayList<>();
+        this.corcasa = new ArrayList<>();
+       
+    }
 
-    public ArrayList<Porta> getPortas() {
+    public ArrayList<String> getCorcasa() {
+        return corcasa;
+    }
+
+    public void setCorcasa(ArrayList<String> corcasa) {
+        this.corcasa = corcasa;
+    }
+   
+
+  
+
+    
+
+   public ArrayList<Porta> getPortas() {
         return portas;
     }
 
@@ -23,30 +44,35 @@ public class Casa {
         this.portas = portas;
     }
 
-    public String getCorcasa() {
-        return corcasa;
-    }
-
     
-    public void PintaCasa(String corcasa){
-         this.corcasa = corcasa;
-    }
     
-    /*public int quantasPortasEstaoAbertas(){
-        
+    public int quantasPortasEstaoAbertas(int contador){
+      int portasabertas =0;
+      for (int i =0;i<this.portas.size();i++){
+          if(contador%2==0){
+             portasabertas++; 
+          }else {
+              portasabertas+=0;
+          }
+          
+      }
+      return portasabertas;
+      
     }
     public int totalDePortas(){
-    
+        
+        return this.portas.size();
+      
     
     }
     
-                */
+                
     public void cadastraPorta(Porta porta){
         this.portas.add(porta); 
     }
-
-    public Casa(String corcasa) {
-        this.portas = new ArrayList<>();
-        this.corcasa = corcasa;
+     public void cadastraCor(String corcasa){
+        this.corcasa.add(corcasa); 
     }
+
+    
 }
