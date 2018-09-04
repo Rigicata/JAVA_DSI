@@ -10,16 +10,26 @@ package ricardoeletro;
  * @author wesle
  */
 public class Batedeira extends Eletro{
+
+    public int getQtdHelices() {
+        return qtdHelices;
+    }
+
+    public void setQtdHelices(int qtdHelices) {
+        this.qtdHelices = qtdHelices;
+    }
      private int qtdHelices;
              
              
     @Override
     public double Desconto(int mes) {
-        if (mes==12){
-            return this.preco*0.20;
-        }else {
-            return this.preco;
-        }
+         double precodes;
+         if (mes==12){
+             precodes=this.preco*0.20;
+             return this.preco-precodes;
+         }else {
+             return this.preco;
+         } 
         
     }
 

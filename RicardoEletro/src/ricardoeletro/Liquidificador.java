@@ -11,14 +11,32 @@ package ricardoeletro;
  */
 public class Liquidificador extends Eletro {
     private Tampa tampa;
+    
+    public Liquidificador() {
+      
+}
+
+    public Tampa getTampa() {
+        return tampa;
+    }
+
+    public void setTampa(Tampa tampa) {
+        this.tampa = tampa;
+    }
+
+   
+    
+    
 
     @Override
     public double Desconto(int mes) {
-        if (mes==9){
-            return this.preco*0.10;
-        }else {
-            return this.preco;
-        }
+         double precodes;
+         if (mes==9){
+             precodes=this.preco*0.15;
+             return this.preco-precodes;
+         }else {
+             return this.preco;
+         } 
     }
 
    

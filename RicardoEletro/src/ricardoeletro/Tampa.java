@@ -9,7 +9,7 @@ package ricardoeletro;
  *
  * @author wesle
  */
-public class Tampa {
+public  class Tampa {
     private String cor;
     private String descricao;
     

@@ -13,8 +13,10 @@ public class Ferro extends Eletro{
 
     @Override
     public double Desconto(int mes) {
+        double precodes;
          if (mes==5){
-             return this.preco*0.10;
+             precodes=this.preco*0.10;
+             return this.preco-precodes;
          }else {
              return this.preco;
          }   
