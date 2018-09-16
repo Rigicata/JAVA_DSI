@@ -9,6 +9,26 @@ package Artista;
  *
  * @author aluno
  */
-public class Ator extends Artista  {
+public class Ator extends Artista implements Pontuacao  {
+    private boolean formacao;
+
+    public boolean getFormacao() {
+        return formacao;
+    }
+
+    public void setFormacao(boolean formacao) {
+        this.formacao = formacao;
+    }
     
+    
+    @Override
+    public int CalculaPontuacao(int qtdApresenta) {
+        if(this.formacao==true && qtdApresenta >=3){
+            return 100;
+        } else {
+            return 0;
+        }
+    }
+
+
 }

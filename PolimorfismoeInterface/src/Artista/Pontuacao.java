@@ -11,7 +11,7 @@ package Artista;
  */
 public interface Pontuacao {
     
-    public void CalculaPontuacao(int qtdApresenta);
+   public int CalculaPontuacao(int qtdApresenta);
         
     
 }
