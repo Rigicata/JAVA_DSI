@@ -5,6 +5,8 @@
  */
 package programaweb;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author aluno
@@ -12,8 +14,12 @@ package programaweb;
 public class Tablet implements Redimensionar{
 
     @Override
-    public float Redimensionar(Conteudo conteudo) {
-        return 0;
+    public ArrayList <Float> Redimensionar(ArrayList<Conteudo> conteudos) {
+        
+        
+        
+        
+        return conteudos;
 
 
     }

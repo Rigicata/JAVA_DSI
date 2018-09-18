@@ -5,6 +5,8 @@
  */
 package programaweb;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author aluno
@@ -12,7 +14,7 @@ package programaweb;
 public class Celular implements Redimensionar {
 
     @Override
-    public float Redimensionar(Conteudo conteudo) {
+    public ArrayList <Float> Redimensionar(Conteudo conteudo) {
         float novoTam;
         
         novoTam=conteudo.getTamanho();

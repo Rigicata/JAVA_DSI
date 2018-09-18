@@ -5,6 +5,8 @@
  */
 package programaweb;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author aluno
@@ -13,23 +15,34 @@ public class Desktop implements Redimensionar{
 
  
     @Override
-    public float Redimensionar(Conteudo conteudo) {
+    public ArrayList <Float> Redimensionar(ArrayList<Conteudo>conteudos) {
+ArrayList <Float> novosTam = new ArrayList<>();
 float novoTam;
-        if(conteudo instanceof Lista|| conteudo instanceof Paragrafo){
-           novoTam= conteudo.getTamanho()*0.3f;
+
+for (int i=0;i<conteudos.size();i++){
+    
+ if(conteudos.get(i) instanceof Lista|| conteudos.get(i) instanceof Paragrafo){
+           novoTam= conteudos.get(i).getTamanho()*0.3f;
              novoTam=novoTam+1.5f;
             
             
             
         }else {
             
-           novoTam =  conteudo.getTamanho();
+           novoTam =  conteudos.get(i).getTamanho();
            novoTam=novoTam*1.2f; 
         
         }
+ 
+ novosTam.add(novoTam);
     
-    return novoTam;
+   
     
     }
+
+ return novosTam;
+
+}
+       
     
 }

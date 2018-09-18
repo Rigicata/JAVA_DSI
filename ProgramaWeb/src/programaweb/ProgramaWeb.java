@@ -19,6 +19,7 @@ public class ProgramaWeb {
         Desktop d= new Desktop();
         Conteudo link = new Link();
         
+        
         link.setCor("Azivis");
         link.setTamanho(12);
         System.out.println(d.Redimensionar(link));

@@ -5,11 +5,13 @@
  */
 package programaweb;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author aluno
  */
 public interface Redimensionar {
-        public abstract float Redimensionar(Conteudo conteudo);
+        public abstract ArrayList <Float> Redimensionar(ArrayList<Conteudo>conteudos);
 
 }
